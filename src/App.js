@@ -1,10 +1,21 @@
+import { useState } from "react";
+import "./App.css";
 
-
-
-.App {
-  font-family: sans-serif;
-  text-align: center;
+export default function App() {
+  return (
+    <div className="App">
+      <Counter />
+    </div>
+  );
 }
 
-
-export default App;
+function Counter() {
+  const [count, setCount] = useState(0);
+  return (
+    <div>
+      <div>
+        <span>Count: {count}</span>
+      </div>
+    </div>
+  );
+}
